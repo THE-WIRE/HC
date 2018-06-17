@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>HC Verify</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <style>
+        .radio{
+            margin: 10px;
+        }
+    </style>
+    <title>HC Verify</title>
 </head>
+
 <body>
 
-    <p id="db-status">MongoDB Status: {{db_status}}</p>
+    <div class="container">
+        <div class="row">
+            <div id="db-status">MongoDB Status: {{db_status}}</div>
+        </div>
+            <hr>
+        <div class="row">
+            <form action="#" class="form form-horizontal">
+                <div class="form-group">
+                    <h3><label class="label-control">Tremendous</label></h3>
+                    <small><strong>Series</strong>: Big Bang Theory | <strong>Episode</strong>: S03E01</small>
+                    <hr>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&nbsp;&nbsp;Meaning 1</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&nbsp;&nbsp;Meaning 2</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&nbsp;&nbsp;Meaning 3</label>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </form>
+        </div>
+    </div>
+    
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script>
     $.ajax({
         url : '/all',
